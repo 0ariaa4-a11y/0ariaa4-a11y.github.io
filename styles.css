@@ -208,3 +208,61 @@ a { color: inherit; text-decoration: none; }
   .tarjetas, .fotos { grid-template-columns: 1fr; }
   .cta { flex-direction: column; align-items: flex-start; }
 }
+
+/* ---------- Participa (vista previa, Tarea 5) ---------- */
+.aviso {
+  background: #fff7e0;
+  border: 1px dashed #d4a72c;
+  border-radius: var(--radio);
+  padding: 16px 20px;
+  font-size: 16px;
+  color: #7a5b00;
+}
+
+.pasos { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.pasos li { display: flex; gap: 14px; align-items: flex-start; padding: 20px; border: 1px solid var(--borde); border-radius: var(--radio); }
+.pasos .num {
+  flex: none; width: 36px; height: 36px; border-radius: 50%;
+  background: #9aaad8; color: var(--blanco);
+  display: grid; place-items: center; font-size: 18px;
+}
+
+.preview { display: grid; grid-template-columns: 3fr 2fr; gap: 24px; align-items: start; }
+
+.formulario, .mis-actividades {
+  position: relative;
+  display: flex; flex-direction: column; gap: 16px;
+  padding: 28px 24px 24px;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--blanco);
+}
+.mis-actividades { background: var(--crema); }
+
+.sello {
+  position: absolute; top: -12px; left: 20px;
+  background: var(--texto); color: var(--blanco);
+  font-size: 12px; letter-spacing: 1px; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 999px;
+}
+
+.formulario label { display: flex; flex-direction: column; gap: 6px; font-size: 15px; }
+.formulario input[type="email"], .formulario input[type="text"], .formulario textarea {
+  font: inherit; padding: 10px 12px;
+  border: 1px solid var(--borde); border-radius: 10px;
+  background: #f6f7f9; color: var(--texto-suave);
+}
+.formulario fieldset { border: 1px solid var(--borde); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+.formulario legend { font-size: 15px; padding: 0 6px; }
+.formulario .check { flex-direction: row; align-items: center; gap: 8px; color: var(--texto-suave); }
+.formulario .btn:disabled { opacity: .5; cursor: not-allowed; }
+.req { color: #c0392b; }
+.opc, .nota { color: var(--texto-suave); font-size: 13px; }
+
+.mis-actividades ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.mis-actividades li { background: var(--blanco); border: 1px solid var(--borde); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; }
+.mis-actividades li span { font-size: 13px; color: var(--texto-suave); }
+
+@media (max-width: 700px) {
+  .pasos, .preview { grid-template-columns: 1fr; }
+}
